@@ -1,3 +1,48 @@
-body {
-    background-color: papayawhip;
+:root {
+    /* Colors */
+    --primary-red: #8b0000;
+    --cream-white: #fffcf2;
+    --olive-green: #556b2f;
+    --dark-charcoal: #252422;
+
+    /* Fonts */
+    --font-main: 'Georgia', serif;
+    --font-accent: 'Verdana', sans-serif;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: var(--cream-white);
+    color: var(--dark-charcoal);
+    font-family: var(--font-main);
+}
+
+h1 {
+    color: var(--primary-red);
+}
+
+button {
+    background-color: var(--olive-green);
+    color: var(--cream-white);
+    padding: 10px 20px;
+    border: none;
+    font-family: var(--font-accent);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--primary-red);
+    }
+
+    &.active {
+        background-color: var(--primary-red);
+        font-weight: bold;
+        border-bottom: 3px solid var(--cream-white);
+    }
+}
+
