@@ -1,5 +1,6 @@
 function loadMenu() {
     const content = document.getElementById('content');
+    const fragment = document.createDocumentFragment();
 
     const menuItems = [
         { name: "Lasagna", price: "$15", description: "Layers of pasta, meat sauce, and ricotta."},
@@ -7,24 +8,22 @@ function loadMenu() {
     ];
 
     menuItems.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('menu-item');
+        const card = document.createElement('div');
+        card.classList.add('menu-card');
 
         const title = document.createElement('h2');
-        title.textContent = item.name;
-        
-        const price = document.createElement('span');
-        price.textContent = item.price;
+        title.textContent = `${item.name} - ${item.price}`;
 
         const description = document.createElement('p');
         description.textContent = item.description;
 
-        itemDiv.appendChild(title);
-        itemDiv.appendChild(price);
-        itemDiv.appendChild(description);
+        card.appendChild(title);
+        card.appendChild(description);
 
-        content.appendChild(itemDiv);
+        fragment.appendChild(card);
     });
+
+    content.appendChild(fragment);
 }
 
 export default loadMenu;

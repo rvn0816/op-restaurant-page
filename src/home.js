@@ -1,5 +1,6 @@
 function loadHome() {
     const content = document.getElementById('content');
+    const fragment = document.createDocumentFragment();
 
     const headline = document.createElement('h1');
     headline.textContent = 'Bella Notte Trattoria';
@@ -11,9 +12,11 @@ function loadHome() {
     const introduction = document.createElement('p');
     introduction.textContent = 'Experience the heart of Italy in every bite. Our family-owned trattoria has been serving handmade pasta and traditional recipes since 1984. Come for the food, stay for the warmth.';
 
-    content.appendChild(headline);
-    content.appendChild(img);
-    content.appendChild(introduction);
+    fragment.appendChild(headline);
+    fragment.appendChild(img);
+    fragment.appendChild(introduction);
+
+    content.appendChild(fragment);
 }
 
 export default loadHome;

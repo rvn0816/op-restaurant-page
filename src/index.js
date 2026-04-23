@@ -1,6 +1,7 @@
-import loadHome from "./home";
-import loadMenu from "./menu";
-import loadContact from "./contact";
+import './style.css';
+import loadHome from "./home.js";
+import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 
 const content = document.getElementById('content');
 loadHome();
