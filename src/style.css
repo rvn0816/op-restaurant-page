@@ -20,6 +20,20 @@ body {
     background-color: var(--cream-white);
     color: var(--dark-charcoal);
     font-family: var(--font-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--dark-charcoal);
+    color: var(--cream-white);
+    text-align: center;
+    padding: 1rem;
 }
 
 .nav-bar {
@@ -30,19 +44,19 @@ body {
 
     /* icon and restaurant name */
     & .logo-container {
-        margin-inline-start: 10px;
+        margin-inline-start: 20px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
 
         & .logo-icon {
-            margin-inline-end: 10px;
-            font-size: 1.5rem;
+            margin-inline-end: 15px;
+            font-size: 1.8rem;
         }
 
         & .logo-text {
             color: var(--cream-white);
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
         }
     }
@@ -55,7 +69,7 @@ body {
         & button {
             background-color: var(--olive-green);
             color: var(--cream-white);
-            padding: 10px 20px;
+            padding: 15px 20px;
             border: none;
             font-family: var(--font-accent);
             cursor: pointer;
@@ -72,6 +86,40 @@ body {
         }
     }
 }
+
+/* home - hero section */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+
+    & .hero-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    & .hero-tagline {
+        font-family: var(--font-main);
+        color: var(--primary-red);
+        font-size: 2.5rem;
+        font-style: italic;
+        margin-block-start: 1.5rem;
+    }
+
+    & p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: var(--dark-charcoal);
+    }
+}
+
+
 
 /* menu */
 .menu-grid {
