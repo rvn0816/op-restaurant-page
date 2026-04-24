@@ -22,27 +22,100 @@ body {
     font-family: var(--font-main);
 }
 
-h1 {
-    color: var(--primary-red);
-}
-
-button {
+.nav-bar {
     background-color: var(--olive-green);
-    color: var(--cream-white);
-    padding: 10px 20px;
-    border: none;
-    font-family: var(--font-accent);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &:hover {
-        background-color: var(--primary-red);
+    /* icon and restaurant name */
+    & .logo-container {
+        margin-inline-start: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        & .logo-icon {
+            margin-inline-end: 10px;
+            font-size: 1.5rem;
+        }
+
+        & .logo-text {
+            color: var(--cream-white);
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 
-    &.active {
-        background-color: var(--primary-red);
-        font-weight: bold;
-        border-bottom: 3px solid var(--cream-white);
+    /* buttons */
+    & ul {
+        list-style: none;
+        display: flex;
+
+        & button {
+            background-color: var(--olive-green);
+            color: var(--cream-white);
+            padding: 10px 20px;
+            border: none;
+            font-family: var(--font-accent);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: var(--primary-red);
+            }
+
+            &.active {
+                background-color: var(--primary-red);
+                font-weight: bold;
+            }
+        }
     }
 }
 
+/* menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+    padding: 20px;
+
+    & .menu-card {
+        background-color: white;
+        height: 100%;
+        border: 1px solid var(--olive-green);
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        & .menu-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+
+            & h2 {
+                color: var(--olive-green);
+            }
+
+            & span {
+                font-weight: bold;
+                color: var(--olive-green);
+            }
+        }
+
+        & p {
+            color: grey;
+            font-style: italic;
+        }
+    }
+}

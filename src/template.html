@@ -6,13 +6,17 @@
     <title>Restaurant</title>
 </head>
 <body>
-    <header>
-        <div class="logo-icon"></div>
-        <div class="logo-text">Bella Notte Trattoria</div>
+    <header class="nav-bar">
+        <div class="logo-container">
+            <div class="logo-icon">🍽️</div>
+            <h1 class="logo-text">Bella Notte Trattoria</h1>
+        </div>
         <nav>
-            <button data-page="home" id="home-btn">Home</button>
-            <button data-page="menu" id="menu-btn">Menu</button>
-            <button data-page="contact" id="contact-btn">Contact</button>
+            <ul>
+                <li><button data-page="home" id="home-btn" class="active">Home</button></li>
+                <li><button data-page="menu" id="menu-btn">Menu</button></li>
+                <li><button data-page="contact" id="contact-btn">Contact</button></li>
+            </ul>
         </nav>
     </header>
     <div id="content"></div>

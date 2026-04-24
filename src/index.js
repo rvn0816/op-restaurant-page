@@ -12,7 +12,7 @@ const pageMapper = {
     contact: loadContact
 }
 
-const navButtons = document.querySelectorAll('nav button');
+const navButtons = document.querySelectorAll('ul button');
 
 navButtons.forEach(button => {
     button.addEventListener('click', (e) => {
